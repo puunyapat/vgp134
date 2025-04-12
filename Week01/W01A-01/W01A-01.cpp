@@ -2,10 +2,36 @@
 //
 
 #include <iostream>
+#include "Car.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Car myCar;
+
+	std::cout << "Car.\n";
+	myCar.ToString();
+	//myCar.Move();
+	++myCar;
+	myCar.ToString();
+
+	Sedan mySedan;
+
+	std::cout << "\nSedan.\n";
+	mySedan.ToString();
+	mySedan.Move();
+	mySedan.ToString();
+
+	Car* ptr = &mySedan;
+
+	std::cout << "\nSedan Pointer.\n";
+	ptr->ToString();
+	ptr->Move();
+	ptr->ToString();
+
+	Vector2 a, b;
+
+	a.Add(b);
+	a = a + b;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
